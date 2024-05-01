@@ -60,7 +60,8 @@ export default class Customer {
     }
 
     changeAddress(address: Address) {
-        this._address = address
+        this._address = address;
+        this._address.validate();
 
         if (this._eventDispatcher !== undefined) {
             const customerCreatedEvent = new CustomerAddressChangedEvent({
