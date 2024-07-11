@@ -1,6 +1,5 @@
 import ProductRepositoryInterface from "../../../domain/product/repository/product-repository.interface";
-import { OutputCreateProductDto } from "../create/create.product.dto";
-import { InputUpdateProductDto } from "./update.product.dto";
+import { InputUpdateProductDto, OutputUpdateProductDto } from "./update.product.dto";
 
 export default class UpdateProductUseCase {
     private productRepository: ProductRepositoryInterface;
@@ -9,7 +8,7 @@ export default class UpdateProductUseCase {
         this.productRepository = productRepository;
     }
 
-    async execute(input: InputUpdateProductDto): Promise<OutputCreateProductDto> {
+    async execute(input: InputUpdateProductDto): Promise<OutputUpdateProductDto> {
         const product = await this.productRepository.find(input.id);
         product.changeName(input.name);
         product.changePrice(input.price);
