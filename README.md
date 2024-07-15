@@ -14,7 +14,9 @@ npm i -D @swc/jest @swc/cli @swc/core
 # inicializar jest
 npx jest --init
 
+# inicializar endpoints api
+npm run dev
+
 # executar testes
 npm test
-
 
