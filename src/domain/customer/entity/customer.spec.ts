@@ -7,7 +7,7 @@ describe("Customer unit tests", () => {
 
         expect(() => {
             let customer = new Customer("", "John");
-        }).toThrowError("customer: Id is required,");
+        }).toThrowError("customer: Id is required");
 
     });
 
@@ -15,7 +15,7 @@ describe("Customer unit tests", () => {
 
         expect(() => {
             let customer = new Customer("123", "");
-        }).toThrowError("customer: Name is required,");
+        }).toThrowError("customer: Name is required");
 
     });
 
