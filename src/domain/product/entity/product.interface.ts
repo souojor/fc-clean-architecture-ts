@@ -1,5 +1,5 @@
 export default interface ProductInterface {
-    get id(): string;
+    getId(): string;
     get name(): string;
     get price(): number;
 }
