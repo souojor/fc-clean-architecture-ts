@@ -50,10 +50,6 @@ export default class ProductB extends Entity implements ProductInterface {
         return this._name;
     }
 
-    getId(): string {
-        return this.id;
-    }
-
     changePrice(price: number) {
         this._price = price;
         this.validate();

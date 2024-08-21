@@ -11,6 +11,9 @@ nvm install 20
 npm i -D jest @types/jest ts-node --save-dev
 npm i -D @swc/jest @swc/cli @swc/core
 
+# validador
+npm install -S yup
+
 # inicializar jest
 npx jest --init
 
