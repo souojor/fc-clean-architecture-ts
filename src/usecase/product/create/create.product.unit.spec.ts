@@ -40,13 +40,13 @@ describe("Unit test create product use case", () => {
         await expect(usecase.execute(input)).rejects.toThrow("Name is required")
     });
 
-    it("should thrown an error when price is zero", async () => {
+    it("should thrown an error when price is 0", async () => {
         const productRepository = MockRepository();
         const usecase = new CreateProductUseCase(productRepository);
 
         input.name = "Product 1";
         input.price = 0.0;
 
-        await expect(usecase.execute(input)).rejects.toThrow("Price must be greater than zero")
+        await expect(usecase.execute(input)).rejects.toThrow("price must be greater than 0")
     });
 });

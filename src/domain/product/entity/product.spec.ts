@@ -24,11 +24,11 @@ describe("Product unit tests", () => {
         }).toThrowError("product: Id is required,product: Name is required");
     });
 
-    it("should throw error when price is less than zero", () => {
+    it("should throw error when price is less than 0", () => {
 
         expect(() => {
             const product = new Product("123", "Product 1", -100);
-        }).toThrowError("product: Price must be greater than zero");
+        }).toThrowError("product: price must be greater than 0");
 
     });
 
